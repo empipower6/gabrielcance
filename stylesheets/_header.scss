@@ -1,0 +1,62 @@
+.header{
+    color:white;
+    display:flex;
+    flex-flow:row nowrap;
+    font-family: Helvetica, sans-serif;
+    
+    font-weight:400;
+    font-size:0.85vw;
+    padding:0;
+    margin:0;
+    margin-top:-0.5vw;
+    padding:0vw 0vw 2.5vw 0vw;
+    border-bottom:0.2vh solid white;
+
+
+
+    .headerName{
+        flex:2;
+    }
+
+    .headerInformation{
+        flex:2;
+
+        &:hover{
+            font-style:italic;
+        }
+    }
+
+
+    .headerSocial{
+        flex:2;
+
+        .instagram,.mail{
+            color:white;
+            text-decoration: none;
+        }
+
+        .instagram:hover{
+
+            font-style:italic;
+
+        }
+
+        .mail:hover{
+
+            font-style:italic;
+
+        }
+    
+    }
+
+    .headerBlank{
+        flex:1;
+    }
+
+    .headerClock{
+
+        flex:2;
+        display:flex;
+        justify-content: flex-end;
+    }
+}
