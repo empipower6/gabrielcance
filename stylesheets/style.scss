@@ -1,7 +1,23 @@
 @import 'header';
 
+@import 'gallery';
+
 body{
     background-color: black;
     margin:0vw 0.5vw;
     padding:0;
+
+  
+}
+
+html{
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+   
+  &::-webkit-scrollbar{
+    display:none;
+    }
+
 }

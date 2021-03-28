@@ -11,11 +11,19 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "dev": "gatsby clean && gatsby develop"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.2",
+    "dotenv": "^8.2.0",
     "gatsby": "^3.1.2",
+    "gatsby-plugin-image": "^1.1.2",
     "gatsby-plugin-sass": "^4.1.0",
+    "gatsby-plugin-sharp": "^3.1.2",
+    "gatsby-source-contentful": "^5.1.2",
+    "gatsby-transformer-sharp": "^3.1.0",
+    "gsap": "^3.6.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "sass": "^1.32.8"

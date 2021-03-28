@@ -1,0 +1,89 @@
+
+.gallery{
+
+    margin-top:-0.5vw;
+}
+.piece{
+
+    position:relative;
+    top:0;
+    left:0;
+    right:0;
+    height:auto;
+    border-top:0.2vh solid white;
+    padding-bottom:10vh;
+    display:flex;
+    flex-flow:column nowrap;
+    font-family: Helvetica, sans-serif;
+    font-weight:400;
+    font-size:0.85vw;
+    color:white;
+
+
+    .first-row{
+
+        display:flex;
+        flex-flow:row nowrap;
+        padding-top:1vw;
+    
+
+    .media{
+        flex:4;
+
+        
+        
+        .mediaInner{
+            height:auto;
+            width:20vw;
+        }
+    }
+
+    .desc{
+        flex:5;
+        position:relative;
+
+        .projectNumber{
+            position:absolute;
+            right:0;
+            top:0;
+            margin:0;
+        }
+
+        .projectDesc{
+            width:49%;
+        }
+
+        .descBottom{
+
+            flex:5;
+            display:flex;
+            flex-flow:row nowrap;
+            position:absolute;
+            bottom:0;
+            right:0;
+            left:0;
+            white-space: normal; 
+            line-height: 0;
+            height:1.5vw;
+            margin:0;
+            padding:0;
+
+
+
+            .projectTitle{
+                flex:2;
+
+
+            }
+            .projectYear,.projectType{
+                flex:1;
+            }
+
+        }
+        
+
+    }
+    }
+
+    
+}
