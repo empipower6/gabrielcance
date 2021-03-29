@@ -11,7 +11,7 @@
     right:0;
     height:auto;
     border-top:0.2vh solid white;
-    padding-bottom:10vh;
+    padding-bottom:0.7vw;
     display:flex;
     flex-flow:column nowrap;
     font-family: Helvetica, sans-serif;
@@ -24,7 +24,7 @@
 
         display:flex;
         flex-flow:row nowrap;
-        padding-top:1vw;
+        padding-top:0.7vw;
     
 
     .media{
@@ -34,7 +34,7 @@
         
         .mediaInner{
             height:auto;
-            width:20vw;
+            width:34vw;
         }
     }
 
@@ -87,3 +87,4 @@
 
     
 }
+

@@ -8,8 +8,9 @@
     font-size:0.85vw;
     padding:0;
     margin:0;
-    margin:-0.5vw 0.5vw 0 0.5vw;
-    padding:0vw 0 2.5vw 0;
+    padding-top:0.5vw;
+    margin:-0.5vw 0.5vw 0vw 0.5vw;
+    margin-bottom:-2vw !important;
 
     position:fixed;
     top:0;
@@ -18,9 +19,11 @@
 
     background-color: black;
     z-index:1;
+    line-height:0;
 
     .headerName{
         flex:2;
+
     }
 
     .headerInformation{
