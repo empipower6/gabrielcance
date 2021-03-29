@@ -28,6 +28,7 @@
 
     .headerInformation{
         flex:2;
+        padding-left:7vw;
 
         &:hover{
             font-style:italic;
@@ -37,6 +38,7 @@
 
     .headerSocial{
         flex:2;
+        padding-left:7vw;
 
         .instagram,.mail{
             color:white;
