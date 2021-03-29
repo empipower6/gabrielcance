@@ -22,9 +22,6 @@ export default function Home() {
       mediaItems {
         gatsbyImageData(placeholder: TRACED_SVG)
       }
-      description {
-        raw
-      }
     }
   }
   }`
