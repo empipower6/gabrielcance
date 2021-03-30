@@ -13,7 +13,12 @@ const Header = () =>{
 
     const [finalDate, setFinalDate] = useState(hour +":"+minutes+":"+seconds);
 
-    const page = useRef(window.location.pathname);
+    
+    const page = useRef(null);
+    if (typeof window !== `undefined`){
+        page.current = window.location.pathname;
+    }
+
     gsap.registerPlugin(ScrollToPlugin);
 
     useEffect(()=>{
@@ -43,7 +48,7 @@ const Header = () =>{
             <div className="headerName" >
                 
                 {
-                    page.current=='/information'?
+                    page.current && page.current=='/information'?
                     <Link to="/" style={{color:'white',textDecoration:'none'}}> <p>Gabriel Cance</p></Link>:
                     <p onClick={()=>{scrollUp()}}> Gabriel Cance </p>
                 }
