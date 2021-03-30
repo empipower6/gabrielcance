@@ -1,5 +1,7 @@
 import React,{useEffect,useState} from 'react'
-
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { gsap } from "gsap/dist/gsap";
+import { Link } from "gatsby"
 
 const Header = () =>{
 
@@ -11,8 +13,11 @@ const Header = () =>{
 
     const [finalDate, setFinalDate] = useState(hour +":"+minutes+":"+seconds);
 
+    gsap.registerPlugin(ScrollToPlugin);
+
     useEffect(()=>{
       setInterval(()=>{changeTime()},1000);
+      console.log();
     })
 
     const changeTime = () =>{
@@ -24,18 +29,30 @@ const Header = () =>{
         setFinalDate(hour +":"+minutes+":"+seconds);
     }
 
+    const scrollUp = ()=>{
+
+        gsap.to(window,{scrollTo:{y:0},duration:1});
+
+    }
 
 
     return(
         <div className='header'>
 
-            <div className="headerName">
-                <p> Gabriel Cance </p>
+            <div className="headerName" >
+                
+                {
+                    window.location.pathname=='/information'?
+                    <Link to="/" style={{color:'white',textDecoration:'none'}}> <p>Gabriel Cance</p></Link>:
+                    <p onClick={()=>{scrollUp()}}> Gabriel Cance </p>
+                }
             </div>
 
-            <div className="headerInformation">
-                <p> Information</p>
-            </div>
+                <div className="headerInformation">
+                <Link to='/information' style={{color:'white',textDecoration:'none'}}>
+                    <p> Information</p>
+                </Link>
+                </div>
 
             <div className="headerSocial">
                 <p> <a href="https://www.instagram.com/gabrielcance/" target="_blank" rel="noreferrer" className="instagram">Instagram,</a><a href="mailto:cancegabriel@gmail.com" className="mail"> Email</a> </p>

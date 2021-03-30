@@ -15,7 +15,6 @@ const Piece = ({info}) =>{
 
        
 
-        console.log(info);
     },[])
     return (
         <div className="piece">
