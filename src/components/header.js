@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import React,{useEffect,useState,useRef} from 'react'
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { gsap } from "gsap/dist/gsap";
 import { Link } from "gatsby"
@@ -13,11 +13,12 @@ const Header = () =>{
 
     const [finalDate, setFinalDate] = useState(hour +":"+minutes+":"+seconds);
 
+    const page = useRef(window.location.pathname);
     gsap.registerPlugin(ScrollToPlugin);
 
     useEffect(()=>{
       setInterval(()=>{changeTime()},1000);
-      console.log();
+      
     })
 
     const changeTime = () =>{
@@ -42,7 +43,7 @@ const Header = () =>{
             <div className="headerName" >
                 
                 {
-                    window.location.pathname=='/information'?
+                    page.current=='/information'?
                     <Link to="/" style={{color:'white',textDecoration:'none'}}> <p>Gabriel Cance</p></Link>:
                     <p onClick={()=>{scrollUp()}}> Gabriel Cance </p>
                 }
