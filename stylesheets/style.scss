@@ -7,17 +7,34 @@ body{
     margin:0vw 0.5vw;
     padding:0;
 
+      
   
+
+  
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0.6vw;
+}
+
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #474747; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey; 
 }
 
 html{
 
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  // -ms-overflow-style: none;  /* IE and Edge */
+  // scrollbar-width: none;  /* Firefox */
 
-   
-  &::-webkit-scrollbar{
-    display:none;
-    }
+      scrollbar-color: #474747 Transparent;
 
 }
