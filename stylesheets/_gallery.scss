@@ -11,7 +11,7 @@
     right:0;
     height:auto;
     border-top:0.1vw solid white;
-    padding-bottom:0.6vw;
+    padding-bottom:0.5vw;
     display:flex;
     flex-flow:column nowrap;
     font-family: Helvetica, sans-serif;
@@ -41,6 +41,7 @@
     .desc{
         flex:5;
         position:relative;
+        margin-left:14vw;
 
         .projectNumber{
             position:absolute;
@@ -79,6 +80,9 @@
                 flex:1;
             }
 
+            .projectYear{
+                padding-left:3vw;
+            }
         }
         
 

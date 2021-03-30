@@ -9,7 +9,7 @@ const Header = () =>{
     let minutes = date.getMinutes()<10? "0"+date.getMinutes():date.getMinutes();    
     let seconds = date.getSeconds()<10? "0"+date.getSeconds():date.getSeconds();  
 
-    const [finalDate, setFinalDate] = useState(hour +" : "+minutes+" : "+seconds);
+    const [finalDate, setFinalDate] = useState(hour +":"+minutes+":"+seconds);
 
     useEffect(()=>{
       setInterval(()=>{changeTime()},1000);
@@ -21,7 +21,7 @@ const Header = () =>{
         hour = date.getHours()<10? "0"+ date.getHours():date.getHours();    
         minutes = date.getMinutes()<10? "0"+date.getMinutes():date.getMinutes();    
         seconds = date.getSeconds()<10? "0"+date.getSeconds():date.getSeconds() ;  
-        setFinalDate(hour +" : "+minutes+" : "+seconds);
+        setFinalDate(hour +":"+minutes+":"+seconds);
     }
 
 

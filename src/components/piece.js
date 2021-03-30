@@ -33,10 +33,10 @@ const Piece = ({info}) =>{
 
                 <div className="desc">
                 
-                    <div className="projectDesc">
+                    {/* <div className="projectDesc">
                     
                     {info.description ? documentToReactComponents(JSON.parse(info.description.raw),options): ""}
-                    </div>
+                    </div> */}
 
                     <p className="projectNumber">{info.projectNumber}</p>
 

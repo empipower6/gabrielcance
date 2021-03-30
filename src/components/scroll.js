@@ -37,7 +37,7 @@ const Scroll = () =>{
         console.log(disappear);
 
         const timeline = gsap.timeline({paused:true});
-        timeline.fromTo(scroll.current,{opacity:1},{opacity:0,duration:0.5});
+        timeline.fromTo(scroll.current,{opacity:1},{opacity:0,duration:0.3});
 
         disappear ? timeline.reverse(0.5):timeline.play();
 
