@@ -19,8 +19,21 @@ export default function Home() {
       typeOfWork
       year
       projectNumber
-      mediaItems {
-        gatsbyImageData(placeholder: TRACED_SVG)
+      chooseMediaType {
+
+        ... on ContentfulNormalMedia {
+          title
+          normalMedia {
+            gatsbyImageData
+          }
+        }
+        ... on ContentfulVideoUrl {
+          title
+          videoLink
+        }
+      }
+      description {
+        raw
       }
     }
   }
@@ -29,7 +42,6 @@ export default function Home() {
 
   useEffect(()=>{
 
-    console.log();
 
   },[])
   return(
