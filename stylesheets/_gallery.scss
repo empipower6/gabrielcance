@@ -19,7 +19,7 @@
     font-weight:400;
     font-size:0.85vw;
     color:white;
-    overflow: hidden;
+    
 
     .normalOne,.video{
         height:90vh;
@@ -31,21 +31,27 @@
         display:flex;
         flex-flow:row nowrap;
         padding-top:0.7vw;
-    
+        padding-bottom:0.7vw;
+
 
     .media{
         flex:4;
 
-        padding-bottom:0.5vw;
-
         
         .mediaInner{
-            width:30vw;
+            height:100%;
 
-            .imageOutline{
+
+            .innerLayout{
+                height:100%;
+
             
-            max-height: 80vh;
-
+             img{
+                height:90vh;
+                width:100%;
+                object-fit: contain;
+             }
+            
             }
 
 
@@ -55,7 +61,7 @@
             .videoOutline{
                 position: relative;
                 padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
-
+                width:100%;
                 .react-player {
                     position: absolute;
                     top: 0;
@@ -64,7 +70,12 @@
             }
         
         .mediaInnerMany{
-            width:90%;
+
+            img{
+                height: 90vh;
+                width: 100%;
+                object-fit: contain;
+             }
 
         }
     }
@@ -73,6 +84,7 @@
         flex:5;
         position:relative;
         margin-left:14vw;
+
 
         .projectNumber{
             position:absolute;
@@ -95,16 +107,22 @@
             bottom:0;
             right:0;
             left:0;
-            margin:0;
-            padding:0;
+
 
 
             .furtherBottom{
                 display:flex;
                 flex-flow:row nowrap;
                 align-items:flex-end;
+                align-content:flex-end;
                 width:100%;
-                
+
+
+                p{
+                    margin:0;
+                    padding:0;
+                }
+                             
 
 
             }

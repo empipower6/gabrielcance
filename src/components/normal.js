@@ -23,11 +23,13 @@ import { GatsbyImage } from "gatsby-plugin-image"
             :
             <div className="mediaInner">
 
-                <div className="imageOutline">
+                <div className="innerLayout">
+
 
                     <GatsbyImage image={media.normalMedia[0].gatsbyImageData} alt={media.title} style={{maxHeight:'100%'}} /> 
-                    
+
                 </div>
+
             </div>
             }
         </>
