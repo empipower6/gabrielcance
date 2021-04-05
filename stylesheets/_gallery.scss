@@ -3,6 +3,7 @@
 
     margin-top:-0.5vw;
     border-bottom:0.1vw solid white;
+    //padding-left:0.5vw;
 
 }
 .piece{
@@ -11,7 +12,7 @@
     top:0;
     left:0;
     right:0;
-    height:auto;
+    height:100%;
     border-top:0.1vw solid white;
     display:flex;
     flex-flow:column nowrap;
@@ -19,12 +20,9 @@
     font-weight:400;
     font-size:0.85vw;
     color:white;
-    border:0.1vw solid white;
-    
+   
 
-    .normalOne,.video{
-        height:90vh;
-    }
+
 
 
     .row{
@@ -37,41 +35,33 @@
 
     .media{
         flex:4;
+        //border:0.1vw solid lightblue;
+        margin:0;
+        padding:0;
+        height:100%;
 
-        
         .mediaInner{
             height:100%;
-            border:0.1vw solid blue;
-            position:relative;
+            width:36vw;
 
 
-
-            .innerLayout{
-                height:100%;
-                border:0.1vw solid red;
-                position:absolute;
-                left:0;
-                top:0;
-                
-                
-
-
-            
-             img{
-                height:90vh;
-                width:100%;
-                object-fit: contain;
-             }
-            
-            }
-
+        
+                img{
+                   // border:0.1vw solid lightblue;
+                    height:100%;
+                    width:100%;
+                    object-fit: contain;
+                }
 
         }
+
+        
             
             .videoOutline{
                 position: relative;
                 padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
-                width:100%;
+                width:36vw;
+                height:auto;
                 .react-player {
                     position: absolute;
                     top: 0;
@@ -82,7 +72,7 @@
         .mediaInnerMany{
 
             img{
-                height: 90vh;
+                //height: 90vh;
                 width: 100%;
                 object-fit: contain;
              }
@@ -92,8 +82,9 @@
 
     .desc{
         flex:5;
-        position:relative;
+        height:auto;
         margin-left:14vw;
+        //border:0.1vw solid blue;
 
 
         .projectNumber{
@@ -103,9 +94,7 @@
             margin:0;
         }
 
-        .projectDesc{
-            width:49%;
-        }
+       
 
         .descBottom{
 
@@ -113,10 +102,8 @@
             display:flex;
             flex-flow:column nowrap;
             align-items: flex-start;
-            position:absolute;
-            bottom:0;
-            right:0;
-            left:0;
+            justify-content: flex-end;
+            height:100%;
 
 
 
@@ -128,10 +115,24 @@
                 width:100%;
 
 
+
                 p{
                     margin:0;
                     padding:0;
                 }
+
+
+            .projectDesc{
+                flex:2;              
+                                
+                p{
+                    margin-block-start:0em;
+                    margin-block-end:0em;
+    
+    
+                }
+    
+            }
                              
 
 

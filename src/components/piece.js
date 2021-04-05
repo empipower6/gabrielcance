@@ -84,13 +84,9 @@ const Piece = ({info}) =>{
 
                     <div className="descBottom">
 
-                        <div className="projectDesc">
-                        
-                        {info.description ? documentToReactComponents(JSON.parse(info.description.raw),options): ""}
-                        </div>
                         <div className="furtherBottom">
-                            <div className="projectTitle">
-                                <p>{info.title}</p>
+                            <div className="projectDesc">
+                            {info.description ? documentToReactComponents(JSON.parse(info.description.raw),options): ""}
                             </div>
                             <div className="projectYear">
                                 <p>{info.year}</p>
