@@ -12,22 +12,23 @@ const Piece = ({info}) =>{
         text])
        }
 
-    const findMediaType = () =>{
+    const findMediaType = (media,index) =>{
+
 
         let result;
 
-        if(info.chooseMediaType.normalMedia){
-            result = <Normal media={info.chooseMediaType} />
+        if(media.normalMedia){
+            result = <Normal media={media.normalMedia} key={index}/>
 
        }
-       else if(info.chooseMediaType.videoLink){
-            result = <Video url={info.chooseMediaType.videoLink} />
+       else if(media.videoLink){
+            result = <Video url={media.videoLink} key={index} />
 
        }
-       else if(info.chooseMediaType.carouselMedia){
-            result =  <Carousel />
+    //    else if(info.chooseMediaType.carouselMedia){
+    //         result =  <Carousel />
 
-       }
+    //    }
        else{
            result =  "";
        }
@@ -37,43 +38,50 @@ const Piece = ({info}) =>{
 
     }
 
-    const findClassName = () =>{
+    // const findClassName = () =>{
 
-        let result;
+    //     let result;
 
-        if(info.chooseMediaType.normalMedia){
-            result = info.chooseMediaType.normalMedia.length > 1 ? "normalMany":"normalOne";
+    //     if(info.chooseMediaType.normalMedia){
+    //         result = info.chooseMediaType.normalMedia.length > 1 ? "normalMany":"normalOne";
 
-       }
-       else if(info.chooseMediaType.videoLink){
-            result = "video"
+    //    }
+    //    else if(info.chooseMediaType.videoLink){
+    //         result = "video"
 
-       }
-       else if(info.chooseMediaType.carouselMedia){
-            result =  "carousel"
+    //    }
+    //    else if(info.chooseMediaType.carouselMedia){
+    //         result =  "carousel"
 
-       }
-       else{
-           result =  "";
-       }
+    //    }
+    //    else{
+    //        result =  "";
+    //    }
 
-       return result;
+    //    return result;
 
 
-    }
+    // }
 
     useEffect(()=>{
-
 
        
 
     },[])
     return (
         <div className="piece">
-            <div className={`row ${findClassName()}`}>
+            <div className="row">
                 <div className="media">
+
             
-                        {findMediaType()}
+                        {
+                          info.chooseMedia.map((media,index)=>(
+
+                            findMediaType(media,index)
+
+                           ))
+                        }
+
                 </div>
 
                 <div className="desc">

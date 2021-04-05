@@ -19,21 +19,20 @@ export default function Home() {
       typeOfWork
       year
       projectNumber
-      chooseMediaType {
-
-        ... on ContentfulNormalMedia {
-          title
+      description {
+        raw
+      }
+      chooseMedia {
+        ... on ContentfulImages {
           normalMedia {
             gatsbyImageData
           }
-        }
-        ... on ContentfulVideoUrl {
           title
+
+        }
+        ... on ContentfulVideoFromUrl {
           videoLink
         }
-      }
-      description {
-        raw
       }
     }
   }
@@ -42,7 +41,7 @@ export default function Home() {
 
   useEffect(()=>{
 
-
+    //  console.log(data.pieces.nodes);
   },[])
   return(
     <div>

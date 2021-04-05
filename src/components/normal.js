@@ -4,17 +4,17 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
     useEffect(()=>{
 
-        console.log(media.normalMedia.length);
+        console.log(media);
     },[])
 
     return (
         <>
-            {media.normalMedia.length > 1 ? 
+            {media.length > 1 ? 
             
-            media.normalMedia.map((image,index)=>(
+            media.map((image,index)=>(
             <div className="mediaInnerMany">
 
-                <GatsbyImage image={image.gatsbyImageData} key={index} alt={image.title} style={{maxHeight:'100%'}} /> 
+                <GatsbyImage image={image.gatsbyImageData} key={index} alt={image.title} /> 
 
             </div>
 
@@ -23,9 +23,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
             :
             <div className="mediaInner">
 
-
-
-                    <GatsbyImage image={media.normalMedia[0].gatsbyImageData} alt={media.title} style={{maxHeight:'100%'}} /> 
+                    <GatsbyImage image={media[0].gatsbyImageData} alt={media[0].title} /> 
 
             </div>
             }

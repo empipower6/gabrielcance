@@ -12,6 +12,8 @@
     top:0;
     left:0;
     right:0;
+    margin:0;
+    padding:0;
     height:100%;
     border-top:0.1vw solid white;
     display:flex;
@@ -20,6 +22,8 @@
     font-weight:400;
     font-size:0.85vw;
     color:white;
+    padding-top:0.7vw;
+    padding-bottom:0.7vw;
    
 
 
@@ -29,43 +33,35 @@
 
         display:flex;
         flex-flow:row nowrap;
-        padding-top:0.7vw;
-        padding-bottom:0.7vw;
+       
+       
 
 
     .media{
         flex:4;
-        //border:0.1vw solid lightblue;
-        margin:0;
-        padding:0;
-        height:100%;
 
         .mediaInner{
-            height:100%;
             width:36vw;
-
-
-        
+            line-height:0;
                 img{
-                   // border:0.1vw solid lightblue;
-                    height:100%;
                     width:100%;
                     object-fit: contain;
                 }
+
 
         }
 
         
             
             .videoOutline{
-                position: relative;
-                padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
+                position:relative;
                 width:36vw;
-                height:auto;
+                height:57%;
                 .react-player {
+                   
                     position: absolute;
-                    top: 0;
-                    left: 0;
+                    left:0;
+                    top:0;
                   }
             }
         
@@ -84,13 +80,13 @@
         flex:5;
         height:auto;
         margin-left:14vw;
-        //border:0.1vw solid blue;
+        position:relative;
 
 
         .projectNumber{
             position:absolute;
             right:0;
-            top:0;
+            top:0vw;
             margin:0;
         }
 
