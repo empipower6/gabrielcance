@@ -13,12 +13,16 @@ const Piece = ({info}) =>{
        }
 
     const findMediaType = (media,index) =>{
-
+        
+        let amount = info.chooseMedia.length;
+        console.log(amount);
 
         let result;
 
         if(media.normalMedia){
-            result = <Normal media={media.normalMedia} key={index}/>
+
+            result = amount > 1  ? [<Normal media={media.normalMedia} key={index}/>,<div className="separator"></div>] : <Normal media={media.normalMedia} key={index}/>
+        
 
        }
        else if(media.videoLink){
@@ -33,7 +37,8 @@ const Piece = ({info}) =>{
            result =  "";
        }
 
-       return result;
+
+       return result ;
 
 
     }
@@ -78,6 +83,7 @@ const Piece = ({info}) =>{
                           info.chooseMedia.map((media,index)=>(
 
                             findMediaType(media,index)
+                            
 
                            ))
                         }

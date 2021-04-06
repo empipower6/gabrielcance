@@ -25,7 +25,7 @@ export default function Home() {
       chooseMedia {
         ... on ContentfulImages {
           normalMedia {
-            gatsbyImageData
+            gatsbyImageData(placeholder: TRACED_SVG)
           }
           title
 

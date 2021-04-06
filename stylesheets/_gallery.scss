@@ -39,6 +39,7 @@
 
     .media{
         flex:4;
+        height:100%;
 
         .mediaInner{
             width:36vw;
@@ -50,20 +51,27 @@
 
 
         }
-
+        
+        .separator{
+            height:1vh;
+        }
         
             
-            .videoOutline{
-                position:relative;
-                width:36vw;
-                height:57%;
-                .react-player {
-                   
-                    position: absolute;
-                    left:0;
-                    top:0;
-                  }
+        .videoOutline{
+            position:relative;
+            top:0;
+            left:0;
+            width:36vw !important;
+            height:60vh;
+            // border:0.1vw solid white;
+            margin-top:0;
+            .react-player {
+                
+                position: absolute;
+                left:0;
+                top:0;
             }
+        }
         
         .mediaInnerMany{
 
@@ -163,6 +171,17 @@
         margin-top:-0.25vw;
 
 
+        .videoOutline{
+            position:relative;
+            width:36vw;
+            height:57%;
+            .react-player {
+               
+                position: absolute;
+                left:0;
+                top:0;
+              }
+        }
        
     
     }

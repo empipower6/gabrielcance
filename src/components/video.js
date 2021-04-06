@@ -8,8 +8,13 @@ import ReactPlayer from 'react-player'
 
                 <div className="videoOutline">
 
-                 <ReactPlayer className="react-player" url={url} width="100%" height="100%" />
-                    
+                 {/* <ReactPlayer className="react-player" url={url} width="100%" height="100%" /> */}
+                 {/* <video className="react-player" controls>
+                    <source src={url} />
+                 </video>   */}
+
+                 <iframe src={url} width="320" height="240"></iframe>
+
                 </div>
 
         </>
