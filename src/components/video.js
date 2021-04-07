@@ -1,21 +1,29 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import ReactPlayer from 'react-player'
 
- const Video = ({url}) => {
+ const Video = ({data}) => {
+
+ 
+
+    const frame= useRef(null);
+
+    const findHeight = () =>{
+
+        let aspectRatio = data.aspectRatioHeight/data.aspectRatioWidth;
+
+
+         let height= 36*aspectRatio+'vw';
+
+                return height;
+            
+      }
     return (
         <>
 
 
-                <div className="videoOutline">
 
-                 {/* <ReactPlayer className="react-player" url={url} width="100%" height="100%" /> */}
-                 {/* <video className="react-player" controls>
-                    <source src={url} />
-                 </video>   */}
-
-                 <iframe src={url} width="320" height="240"></iframe>
-
-                </div>
+                 <ReactPlayer className="react-player" ref={frame} url={data.videoLink} width='36vw' height={findHeight()} onReady={findHeight()} />
+                 
 
         </>
     )

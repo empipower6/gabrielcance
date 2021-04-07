@@ -26,7 +26,7 @@ const Piece = ({info}) =>{
 
        }
        else if(media.videoLink){
-            result = <Video url={media.videoLink} key={index} />
+            result = <Video data={media} key={index} />
 
        }
     //    else if(info.chooseMediaType.carouselMedia){

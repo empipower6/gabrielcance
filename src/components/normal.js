@@ -4,7 +4,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
     useEffect(()=>{
 
-        console.log(media);
     },[])
 
     return (

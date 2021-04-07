@@ -32,6 +32,8 @@ export default function Home() {
         }
         ... on ContentfulVideoFromUrl {
           videoLink
+          aspectRatioHeight
+          aspectRatioWidth
         }
       }
     }
