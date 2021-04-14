@@ -35,6 +35,14 @@ export default function Home() {
           aspectRatioHeight
           aspectRatioWidth
         }
+        ... on ContentfulGif {
+          nameOfGif
+          gif {
+            file {
+              url
+            }
+          }
+        }
       }
     }
   }

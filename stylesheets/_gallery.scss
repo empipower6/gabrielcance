@@ -41,6 +41,18 @@
         flex:4;
         height:100%;
 
+        .mediaGif{
+            width:35.97vw;
+            height:auto;
+            line-height:0;
+            img{
+                width:100%;
+                height:100%;
+                object-fit: contain;
+            }
+
+        }
+
         .mediaInner{
             width:36vw;
             line-height:0;

@@ -3,6 +3,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Normal from './normal'
 import Video from './video'
 import Carousel from './carousel'
+import Gif from './gif'
 
 const Piece = ({info}) =>{
 
@@ -15,24 +16,29 @@ const Piece = ({info}) =>{
     const findMediaType = (media,index) =>{
         
         let amount = info.chooseMedia.length;
-        console.log(amount);
 
         let result;
 
         if(media.normalMedia){
 
-            result = amount > 1  ? [<Normal media={media.normalMedia} key={index}/>,<div className="separator"></div>] : <Normal media={media.normalMedia} key={index}/>
+            result = amount > 1  && index < amount -1 ? [<Normal media={media.normalMedia} key={index}/>,<div className="separator"></div>] : <Normal media={media.normalMedia} key={index}/>
         
 
        }
        else if(media.videoLink){
-            result = <Video data={media} key={index} />
+            // result = <Video data={media} key={index} />
+            result = amount > 1 && index < amount -1 ? [<Video data={media} key={index} />,<div className="separator"></div>] : <Video data={media} key={index} />
 
        }
-    //    else if(info.chooseMediaType.carouselMedia){
-    //         result =  <Carousel />
+       else if(media.gif){
 
-    //    }
+        console.log(index +" and the amount is "+amount);
+        
+        result = amount > 1 && index < amount -1 ? [<Gif data={media} key={index} />,<div className="separator"></div>] : <Gif data={media} key={index} />
+        
+
+   }
+
        else{
            result =  "";
        }
