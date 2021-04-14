@@ -3,6 +3,11 @@ import Header from '../components/header'
 import Scroll from '../components/scroll'
 import Gallery from '../components/gallery'
 
+import { Helmet } from "react-helmet"
+import Favicon from '../images/gatsby-icon.png'
+
+
+
 import { useStaticQuery, graphql } from 'gatsby'
 
 
@@ -54,7 +59,16 @@ export default function Home() {
     //  console.log(data.pieces.nodes);
   },[])
   return(
+
+    
     <div>
+
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>Gabriel Cance</title>
+          <link rel="icon" href={Favicon} /> 
+          {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+        </Helmet>
       <Header />
 
       <Scroll />

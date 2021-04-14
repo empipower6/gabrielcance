@@ -4,6 +4,8 @@ import Header from '../components/header'
 import { useStaticQuery, graphql } from 'gatsby'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
+import { Helmet } from "react-helmet"
+import Favicon from '../images/gatsby-icon.png'
 
 const Information = () =>{
 
@@ -34,6 +36,14 @@ const Information = () =>{
       },[])
     return(
         <>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Information</title>
+          <link rel="icon" href={Favicon} /> 
+
+          {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+        </Helmet>
+
         <Header />
 
          <div className="info">
