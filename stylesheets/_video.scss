@@ -1,0 +1,17 @@
+.desktopVideo {
+  display: flex;
+}
+
+.mobileVideo {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .desktopVideo {
+    display: none;
+  }
+
+  .mobileVideo {
+    display: flex;
+  }
+}

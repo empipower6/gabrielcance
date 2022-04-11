@@ -1,91 +1,176 @@
-.header{
-    color:white;
-    display:flex;
-    flex-flow:row nowrap;
-    font-family: Helvetica, sans-serif;
-    
-    font-weight:400;
-    font-size:0.85vw;
-    padding:0;
-    margin:0;
-    padding-top:0.5vw;
-    margin:-0.5vw 0.5vw 0vw 0.5vw;
+.header {
+  color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: Helvetica, sans-serif;
 
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
+  font-weight: 400;
+  font-size: 0.85vw;
+  padding: 0;
+  margin: 0;
+  padding-top: 0.5vw;
+  margin: -0.5vw 0.5vw 0vw 0.5vw;
 
-    background-color: black;
-    z-index:1;
-    line-height:0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 
-    .headerName{
-        flex:2;
+  background-color: black;
+  z-index: 1;
+  line-height: 0;
 
-        p:hover{
-            font-style:italic;
-        }
+  .headerName {
+    // flex:2;
+    width: 20%;
+    p:hover {
+      font-style: italic;
+    }
+  }
 
+  .headerInformation {
+    // flex:2;
+    width: 20%;
+    padding-left: 7vw;
+
+    p:hover {
+      font-style: italic;
+    }
+  }
+
+  .headerSocial {
+    // flex:2;
+    padding-left: 7vw;
+    width: 20%;
+    .instagram,
+    .mail {
+      color: white;
+      text-decoration: none;
     }
 
-    .headerInformation{
-        flex:2;
-        padding-left:7vw;
-     
-
-        p:hover{
-            font-style:italic;
-        }
+    .instagram:hover {
+      font-style: italic;
     }
 
-
-    .headerSocial{
-        flex:2;
-        padding-left:7vw;
-
-        .instagram,.mail{
-            color:white;
-            text-decoration: none;
-        }
-
-        .instagram:hover{
-
-            font-style:italic;
-
-        }
-
-        .mail:hover{
-
-            font-style:italic;
-
-        }
-    
+    .mail:hover {
+      font-style: italic;
     }
+  }
 
-    .headerBlank{
-        flex:1;
-    }
+  .headerBlank {
+    width: 10%;
+  }
 
-    .headerClock{
-
-        flex:2;
-        display:flex;
-        justify-content: flex-end;
-    }
+  .headerClock {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
-.scrollDown{
-    position:relative;
-    padding-top:95vh;
-    color:white;
+.scrollDown {
+  // position: relative;
+  // padding-top: 95vh;
+  color: white;
+  height: 99.9vh;
+  display: flex;
+  align-items: flex-end;
+  p {
+    font-family: Helvetica, sans-serif;
 
-    p{
+    font-weight: 400;
+    font-size: 0.85vw;
+  }
+}
 
-        font-family: Helvetica, sans-serif;
-    
-    font-weight:400;
-    font-size:0.85vw;
+@media only screen and (max-width: 1300px) and (min-width: 767px) {
+  .header {
+    font-size: 12px;
 
+    .headerClock {
+      width: 15%;
     }
+    .headerInformation {
+      width: 23%;
+      padding-left: 0;
+    }
+    .headerName {
+      width: 27%;
+    }
+    .headerSocial {
+      width: 35%;
+    }
+    .headerInformation,
+    .headerSocial {
+      padding: 0;
+    }
+    .headerBlank {
+      display: none;
+    }
+  }
+  .scrollDown {
+    padding-top: 0;
+    height: 99.7vh;
+    display: flex;
+    align-items: flex-end;
+    p {
+      font-size: 12px;
+      margin-block-start: 0;
+      margin-block-end: 1.1vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    font-size: 11px;
+
+    .headerClock {
+      width: 15%;
+    }
+    .headerInformation {
+      width: 23%;
+      padding-left: 0;
+    }
+    .headerName {
+      width: 27%;
+    }
+    .headerSocial {
+      width: 35%;
+    }
+    .headerInformation,
+    .headerSocial {
+      padding: 0;
+    }
+    .headerBlank {
+      display: none;
+    }
+  }
+  .scrollDown {
+    padding-top: 0;
+    height: 99.5vh;
+    display: flex;
+    align-items: flex-end;
+
+    p {
+      font-size: 11px;
+      margin-block-start: 0;
+      margin-block-end: 0.8vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header {
+    font-size: 10px;
+  }
+  .scrollDown {
+    height: 99vh;
+
+    p {
+      font-size: 10px;
+      margin-block-start: 0;
+      margin-block-end: 1vh;
+    }
+  }
 }

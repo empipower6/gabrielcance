@@ -1,31 +1,26 @@
-@import 'header';
+@import "header";
 
-@import 'gallery';
+@import "gallery";
 
-@import 'info';
+@import "info";
+@import "video";
 
-
-body{
-    background-color: black;
-    margin:0vw 0.5vw;
-    padding:0;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-      
-  
-
-  
+body {
+  background-color: black;
+  margin: 0vw 0.5vw;
+  padding: 0;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 /* width */
 html::-webkit-scrollbar {
   display: none;
 }
 
-html{
-
+html {
   // -ms-overflow-style: none;  /* IE and Edge */
   // scrollbar-width: none;  /* Firefox */
 
-  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
 }

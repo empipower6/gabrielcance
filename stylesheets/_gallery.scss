@@ -1,188 +1,245 @@
-
-.gallery{
-
-    margin-top:-0.5vw;
-    border-bottom:0.1vw solid white;
-    //padding-left:0.5vw;
-
+.gallery {
+  margin-top: -0.5vw;
+  border-bottom: 0.1vw solid white;
+  //padding-left:0.5vw;
 }
-.piece{
+.piece {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  border-top: 0.1vw solid white;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 0.85vw;
+  color: white;
+  padding-top: 0.7vw;
+  padding-bottom: 0.7vw;
 
-    position:relative;
-    top:0;
-    left:0;
-    right:0;
-    margin:0;
-    padding:0;
-    height:100%;
-    border-top:0.1vw solid white;
-    display:flex;
-    flex-flow:column nowrap;
-    font-family: Helvetica, sans-serif;
-    font-weight:400;
-    font-size:0.85vw;
-    color:white;
-    padding-top:0.7vw;
-    padding-bottom:0.7vw;
-   
+  .row {
+    display: flex;
+    flex-flow: row nowrap;
 
+    .media {
+      height: 100%;
+      width: 40%;
+      .mediaInnerWrapper {
+        .mediaGif {
+          width: 35.97vw;
+          height: auto;
+          line-height: 0;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
 
+        .mediaInner {
+          width: 36vw;
+          line-height: 0;
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
 
+        .separator {
+          height: 1vh;
+        }
 
-    .row{
+        .mediaInnerMany {
+          img {
+            //height: 90vh;
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      .mobileColumn {
+        display: none;
+      }
+    }
 
-        display:flex;
-        flex-flow:row nowrap;
-       
-       
+    .mobileDesc {
+      display: none;
+    }
 
+    .desc {
+      width: 50%;
+      height: auto;
+      margin-left: 14vw;
+      position: relative;
 
-    .media{
-        flex:4;
-        height:100%;
+      .projectNumber {
+        position: absolute;
+        right: 0;
+        top: 0vw;
+        margin: 0;
+      }
 
-        .mediaGif{
-            width:35.97vw;
-            height:auto;
-            line-height:0;
-            img{
-                width:100%;
-                height:100%;
-                object-fit: contain;
+      .descBottom {
+        flex: 5;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        justify-content: flex-end;
+        height: 100%;
+
+        .furtherBottom {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: flex-end;
+          align-content: flex-end;
+          width: 100%;
+
+          p {
+            margin: 0;
+            padding: 0;
+          }
+
+          .projectDesc {
+            flex: 2;
+
+            p {
+              margin-block-start: 0em;
+              margin-block-end: 0em;
+            }
+          }
+        }
+
+        .projectTitle {
+          flex: 2;
+        }
+        .projectYear,
+        .projectType {
+          flex: 1;
+        }
+
+        .projectYear {
+          padding-left: 3vw;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .gallery {
+    margin-top: -0.25vw;
+
+    .videoOutline {
+      position: relative;
+      width: 36vw;
+      height: 57%;
+      .react-player {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .gallery {
+    // margin-top: 7vw;
+    // padding-top: 0;
+    border-bottom: 0.1vw solid white;
+
+    .piece {
+      font-size: 11px;
+      color: white;
+      padding-top: 0.7vw;
+      padding-bottom: 0.7vw;
+      display: flex;
+      flex-flow: row nowrap;
+
+      .row {
+        flex-flow: column nowrap;
+        margin: 5px 0;
+        width: 100%;
+        .media {
+          width: 100%;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          .mediaInnerWrapper {
+            width: 88vw;
+            .mediaGif {
+              width: 100%;
             }
 
-        }
-
-        .mediaInner{
-            width:36vw;
-            line-height:0;
-                img{
-                    width:100%;
-                    object-fit: contain;
-                }
-
-
-        }
-        
-        .separator{
-            height:1vh;
-        }
-        
-            
-      
-        
-        .mediaInnerMany{
-
-            img{
+            .mediaInner {
+              width: 100%;
+            }
+            .mediaInnerMany {
+              width: 100%;
+              img {
                 //height: 90vh;
                 width: 100%;
                 object-fit: contain;
-             }
-
-        }
-    }
-
-    .desc{
-        flex:5;
-        height:auto;
-        margin-left:14vw;
-        position:relative;
-
-
-        .projectNumber{
-            position:absolute;
-            right:0;
-            top:0vw;
-            margin:0;
-        }
-
-       
-
-        .descBottom{
-
-            flex:5;
-            display:flex;
-            flex-flow:column nowrap;
-            align-items: flex-start;
-            justify-content: flex-end;
-            height:100%;
-
-
-
-            .furtherBottom{
-                display:flex;
-                flex-flow:row nowrap;
-                align-items:flex-end;
-                align-content:flex-end;
-                width:100%;
-
-
-
-                p{
-                    margin:0;
-                    padding:0;
-                }
-
-
-            .projectDesc{
-                flex:2;              
-                                
-                p{
-                    margin-block-start:0em;
-                    margin-block-end:0em;
-    
-    
-                }
-    
-            }
-                             
-
-
-            }
-
-            .projectTitle{
-                flex:2;
-
-
-            }
-            .projectYear,.projectType{
-                flex:1;
-            }
-
-            .projectYear{
-                padding-left:3vw;
-            }
-        }
-        
-
-    }
-    }
-
-    
-}
-
-
-@media only screen and (min-width:1900px){
-
-    .gallery{
-
-        margin-top:-0.25vw;
-
-
-        .videoOutline{
-            position:relative;
-            width:36vw;
-            height:57%;
-            .react-player {
-               
-                position: absolute;
-                left:0;
-                top:0;
               }
+            }
+          }
+          .mobileColumn {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 10vw;
+            .sectionNumber {
+              .projectNumber {
+                margin: 0;
+                font-size: 11px;
+              }
+            }
+            .togglerDiv {
+              button {
+                border: none;
+                background: none;
+                color: white;
+                font-size: 11px;
+                white-space: nowrap;
+                padding: 0;
+                p {
+                  padding: 0;
+                  margin: 0;
+                  font-size: 9px;
+                  span {
+                    margin-top: -5px;
+                  }
+                }
+              }
+            }
+          }
         }
-       
-    
+
+        .desc {
+          display: none;
+        }
+        .mobileDesc {
+          display: flex;
+          flex-flow: row nowrap;
+          width: 88vw;
+          p {
+            margin: 5px 0;
+          }
+          .projectDesc {
+            width: 50%;
+          }
+          .projectYear,
+          .projectType {
+            width: 25%;
+            text-align: right;
+          }
+        }
+      }
     }
-
-
+  }
 }

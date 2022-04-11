@@ -12,3 +12,27 @@
         padding-bottom:3vh
     }
 }
+
+@media only screen and (min-width:450px) and (max-width:1200px){
+    
+    .info{
+        
+        font-size:13px;
+        line-height:17px;
+        padding:5vh 20vw 0vw 0vw;
+    
+    }
+}
+
+@media only screen and (max-width:450px){
+    
+    .info{
+        
+        font-size:13.5px;
+        line-height:17px;
+    
+        padding:5vh 10% 0vw 0vw;
+    
+        
+    }
+}

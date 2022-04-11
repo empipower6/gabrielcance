@@ -1,56 +1,43 @@
-import React,{useEffect,useState,useRef} from 'react'
-import { gsap } from "gsap/dist/gsap";
+import React, { useEffect, useState, useRef } from "react"
+import { gsap } from "gsap/dist/gsap"
 
-const Scroll = () =>{
+const Scroll = () => {
+  const [disappear, setDisappear] = useState(true)
 
-    const [disappear, setDisappear] = useState(true);
+  const scroll = useRef(null)
 
-    const scroll = useRef(null);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      checkWhere()
+    })
+  }, [])
 
-    useEffect(()=>{
-
-        window.addEventListener('scroll',()=>{
-            checkWhere();
-        })
-
-    },[])
-
-    const checkWhere= () =>{
-
-        if(window.pageYOffset == 0){
-                setDisappear(true);
-        }
-        else{
-            if(disappear){
-
-                setDisappear(false);
-
-            }
-        }
-
-
+  const checkWhere = () => {
+    if (window.pageYOffset == 0) {
+      setDisappear(true)
+    } else {
+      if (disappear) {
+        setDisappear(false)
+      }
     }
+  }
 
-    useEffect(()=>{
-
- 
-
-        const timeline = gsap.timeline({paused:true});
-        timeline.fromTo(scroll.current,{opacity:1},{opacity:0,duration:0.3});
-
-        disappear ? timeline.reverse(0.5):timeline.play();
-
-    },[disappear])
-
-    return(
-
-        <div className="scrollDown" ref={scroll}>
-
-            <p>Scroll down</p> 
-
-        </div>
-
+  useEffect(() => {
+    const timeline = gsap.timeline({ paused: true })
+    timeline.fromTo(
+      scroll.current,
+      { opacity: 1 },
+      { opacity: 0, duration: 0.3 }
     )
+
+    disappear ? timeline.reverse(0.5) : timeline.play()
+  }, [disappear])
+
+  return (
+    <div className="scrollDown" ref={scroll}>
+      <p>Scroll down</p>
+    </div>
+  )
 }
 
-export default Scroll;
+export default Scroll
