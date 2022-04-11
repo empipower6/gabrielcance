@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react"
 import { gsap } from "gsap/dist/gsap"
+//header.scss
 
 const Scroll = () => {
   const [disappear, setDisappear] = useState(true)
