@@ -69,13 +69,10 @@
 }
 
 .scrollDown {
-  // position: relative;
-  // padding-top: 95vh;
   color: white;
   height: 99.9vh;
   display: flex;
   align-items: flex-end;
-  min-height: -webkit-fill-available;
 
   p {
     font-family: Helvetica, sans-serif;
@@ -112,7 +109,8 @@
   }
   .scrollDown {
     padding-top: 0;
-    height: 99.7vh;
+    // height: 99.7vh;
+    height: 95.7vh;
     display: flex;
     align-items: flex-end;
     p {
@@ -150,7 +148,8 @@
   }
   .scrollDown {
     padding-top: 0;
-    height: 99.5vh;
+    // height: 99.5vh;
+    height: 95.5vh;
     display: flex;
     align-items: flex-end;
 
@@ -167,7 +166,8 @@
     font-size: 10px;
   }
   .scrollDown {
-    height: 99vh;
+    // height: 99vh;
+    height: 95vh;
 
     p {
       font-size: 10px;

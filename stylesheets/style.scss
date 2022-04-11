@@ -11,6 +11,7 @@ body {
   padding: 0;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  height: 100%;
 }
 /* width */
 html::-webkit-scrollbar {
@@ -20,7 +21,7 @@ html::-webkit-scrollbar {
 html {
   // -ms-overflow-style: none;  /* IE and Edge */
   // scrollbar-width: none;  /* Firefox */
-
+  height: 100%;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
 }

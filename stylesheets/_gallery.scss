@@ -227,8 +227,10 @@
           display: flex;
           flex-flow: row nowrap;
           width: 88vw;
+          margin-top: calc(5px + 0.7vw);
           p {
-            margin: 5px 0;
+            margin-block-start: 0;
+            margin-block-end: 0;
           }
           .projectDesc {
             width: 50%;
