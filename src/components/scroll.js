@@ -20,7 +20,7 @@ const Scroll = () => {
   }, [])
   const changeHeight = () => {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight - 100
+    let vh = window.innerHeight - 300
     setHeight(vh)
   }
 
