@@ -4,8 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
- if(process.env.NODE_ENV == 'development'){
-
+if (process.env.NODE_ENV == "development") {
   require("dotenv").config({
     path: `.env`,
   })
@@ -14,8 +13,8 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-   `gatsby-plugin-sass`,
-   `gatsby-plugin-image`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
