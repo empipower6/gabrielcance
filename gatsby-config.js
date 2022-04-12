@@ -4,11 +4,11 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-if (process.env.NODE_ENV == "development") {
-  require("dotenv").config({
-    path: `.env`,
-  })
-}
+// if (process.env.NODE_ENV == "development") {
+require("dotenv").config({
+  path: `.env`,
+})
+// }
 
 module.exports = {
   /* Your site config here */
@@ -16,7 +16,13 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        // The option defaults to true
+        checkSupportedExtensions: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-contentful`,
