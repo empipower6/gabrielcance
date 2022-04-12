@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from "react"
 import { gsap } from "gsap/dist/gsap"
+import { debounce } from "lodash"
+
 //header.scss
 
 const Scroll = () => {
@@ -11,18 +13,22 @@ const Scroll = () => {
     window.addEventListener("scroll", () => {
       checkWhere()
     })
-    // We listen to the resize event
-    window.addEventListener("resize", () => {
-      // We execute the same script as before
-      changeHeight()
-    })
-    changeHeight()
+    // // We listen to the resize event
+    // window.addEventListener("resize", () => {
+    //   // We execute the same script as before
+    //   changeHeight()
+    // })
+    // changeHeight()
+    // window.addEventListener("resize", debounce(changeHeight, 3000))
+    // return () =>
+    //   window.removeEventListener("scroll", debounce(changeHeight, 3000))
   }, [])
-  const changeHeight = () => {
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight
-    setHeight(vh)
-  }
+  // const changeHeight = () => {
+  //   // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+  //   let vh = window.innerHeight * 0.01
+  //   setHeight(vh)
+  // }
+  // useEffect(() => console.log(height), [height])
 
   const checkWhere = () => {
     if (window.pageYOffset === 0) {
@@ -46,7 +52,7 @@ const Scroll = () => {
   }, [disappear])
 
   return (
-    <div className="scrollDown" style={{ height: `${height}` }} ref={scroll}>
+    <div className="scrollDown" ref={scroll}>
       <p>Scroll down</p>
     </div>
   )

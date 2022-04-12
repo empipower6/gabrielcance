@@ -70,10 +70,9 @@
 
 .scrollDown {
   color: white;
-  // height: 99.9vh;
   display: flex;
   align-items: flex-end;
-
+  height: 99.5vh;
   p {
     font-family: Helvetica, sans-serif;
 
@@ -109,8 +108,7 @@
   }
   .scrollDown {
     padding-top: 0;
-    // height: 99.7vh;
-    height: 95.7vh;
+    height: 99.7vh;
     display: flex;
     align-items: flex-end;
     p {
@@ -149,7 +147,7 @@
   .scrollDown {
     padding-top: 0;
     // height: 99.5vh;
-    // height: 95.5vh;
+    height: 90vh;
     display: flex;
     align-items: flex-end;
 

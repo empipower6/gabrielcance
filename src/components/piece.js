@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Normal from "./normal"
 import Video from "./video"
 import Carousel from "./carousel"
@@ -7,11 +6,14 @@ import Gif from "./gif"
 
 const Piece = ({ info }) => {
   const [show, setShow] = useState(false)
-  const options = {
-    renderText: text =>
-      text.split("\n").flatMap((text, i) => [i > 0 && <br />, text]),
-  }
 
+  const rawToReadable = text => {
+    const jsonText = JSON.parse(text)
+    let readableText = jsonText.content[0].content[0].value
+    readableText = readableText.split("\n").join("<br/>")
+
+    return readableText
+  }
   const findMediaType = (media, index) => {
     let amount = info.chooseMedia.length
 
@@ -92,14 +94,14 @@ const Piece = ({ info }) => {
 
           <div className="descBottom">
             <div className="furtherBottom">
-              <div className="projectDesc">
-                {info.description
-                  ? documentToReactComponents(
-                      JSON.parse(info.description.raw),
-                      options
-                    )
-                  : ""}
-              </div>
+              <div
+                className="projectDesc"
+                dangerouslySetInnerHTML={{
+                  __html: info.description
+                    ? rawToReadable(info.description.raw)
+                    : "",
+                }}
+              ></div>
               <div className="projectYear">
                 <p>{info.year}</p>
               </div>
@@ -111,14 +113,14 @@ const Piece = ({ info }) => {
         </div>
         {show ? (
           <div className="mobileDesc">
-            <div className="projectDesc">
-              {info.description
-                ? documentToReactComponents(
-                    JSON.parse(info.description.raw),
-                    options
-                  )
-                : ""}
-            </div>
+            <div
+              className="projectDesc"
+              dangerouslySetInnerHTML={{
+                __html: info.description
+                  ? rawToReadable(info.description.raw)
+                  : "",
+              }}
+            ></div>
             <div className="projectYear">
               <p>{info.year}</p>
             </div>

@@ -1,18 +1,12 @@
-import React, { useEffect } from "react"
+import React from "react"
 
 import Header from "../components/header"
 import { useStaticQuery, graphql } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import { Helmet } from "react-helmet"
 import Favicon from "../images/gatsby-icon.png"
 
 const Information = () => {
-  const options = {
-    renderText: text =>
-      text.split("\n").flatMap((text, i) => [i > 0 && <br />, text]),
-  }
-
   let data = useStaticQuery(graphql`
     query {
       information: allContentfulInformation {
@@ -25,7 +19,19 @@ const Information = () => {
     }
   `)
 
-  useEffect(() => {}, [])
+  const mapParagraphs = () => {
+    const rawData = data.information.nodes[0].description.raw
+    const jsonData = JSON.parse(rawData)
+    let finalData = []
+    jsonData.content.map(para => {
+      finalData.push(para.content[0].value.split("\n").join("<br/>"))
+    })
+    return finalData.map((para, index) => (
+      <div index={`paragraph-${index}`}>
+        <p dangerouslySetInnerHTML={{ __html: para }}></p>
+      </div>
+    ))
+  }
   return (
     <>
       <Helmet
@@ -45,14 +51,7 @@ const Information = () => {
 
       <Header />
 
-      <div className="info">
-        {data.information.nodes[0].description.raw
-          ? documentToReactComponents(
-              JSON.parse(data.information.nodes[0].description.raw),
-              options
-            )
-          : ""}
-      </div>
+      <div className="info">{mapParagraphs()}</div>
     </>
   )
 }
