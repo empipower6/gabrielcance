@@ -6,7 +6,7 @@ import _debounce from "lodash/debounce"
 
 const Scroll = () => {
   const [disappear, setDisappear] = useState(true)
-  const [height, setHeight] = useState(0)
+  const [height, setHeight] = useState(window.innerHeight)
   const scroll = useRef(null)
 
   useEffect(() => {
