@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react"
 import { gsap } from "gsap/dist/gsap"
+import _debounce from "lodash/debounce"
 
 //header.scss
 
@@ -18,15 +19,15 @@ const Scroll = () => {
       changeHeight()
     })
     changeHeight()
-    window.addEventListener("resize", changeHeight)
-    return () => window.removeEventListener("scroll", changeHeight)
+    window.addEventListener("resize", _debounce(changeHeight, 200))
+    return () =>
+      window.removeEventListener("scroll", _debounce(changeHeight, 200))
   }, [])
   const changeHeight = () => {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight
     setHeight(vh)
   }
-  useEffect(() => console.log(height), [height])
 
   const checkWhere = () => {
     if (window.pageYOffset === 0) {
@@ -50,25 +51,15 @@ const Scroll = () => {
   }, [disappear])
 
   return (
-    <>
-      {/* <div
-        style={{
-          backgroundColor: "white",
-          height: "20px",
-          width: "100%",
-          marginTop: `${height - 20}px`,
-        }}
-      ></div> */}
-      <div
-        className="scrollDown"
-        ref={scroll}
-        style={{
-          paddingTop: `${Number(height) - 40}px`,
-        }}
-      >
-        <p>Scroll down</p>
-      </div>
-    </>
+    <div
+      className="scrollDown"
+      ref={scroll}
+      style={{
+        paddingTop: `${Number(height) - 40}px`,
+      }}
+    >
+      <p>Scroll down</p>
+    </div>
   )
 }
 

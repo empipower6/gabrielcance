@@ -245,3 +245,9 @@
     }
   }
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) and (max-width: 1300px) {
+  .gallery {
+    margin-bottom: 50px;
+  }
+}

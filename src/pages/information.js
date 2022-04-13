@@ -39,13 +39,43 @@ const Information = () => {
           lang: "en",
         }}
       >
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         <meta charSet="utf-8" />
-        <title>Information</title>
+        <title>Information about Gabriel Cance</title>
         <link rel="icon" href={Favicon} />
 
         <link
           rel="canonical"
           href="https://www.gabrielcance.com/information/"
+        />
+
+        <meta
+          name="description"
+          content="Art director and graphic designer based in Montreal, Canada. My work is mainly focused on the development of visual identities, editorials design, illustrations and much more, all in the cultural and commercial fields."
+        />
+        <link rel="icon" href={Favicon} />
+        <link
+          rel="canonical"
+          href="https://www.gabrielcance.com/information/"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="article" />
+
+        <meta property="og:title" content="Information about Gabriel Cance" />
+
+        <meta
+          property="og:description"
+          content="Art director and graphic designer based in Montreal, Canada. My work is mainly focused on the development of visual identities, editorials design, illustrations and much more, all in the cultural and commercial fields."
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.gabrielcance.com/information/"
+        />
+
+        <meta
+          property="og:site_name"
+          content="Information about Gabriel Cance"
         />
       </Helmet>
 
