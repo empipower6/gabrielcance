@@ -46,11 +46,13 @@ const Header = () => {
     <div className="header">
       <div className="headerName">
         {page.current && page.current == "/information" ? (
-          <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+          <Link
+            to="/"
+            style={{ color: "white", textDecoration: "none" }}
+            alt={"Go to Home Page"}
+          >
             {" "}
-            <a alt="Home Page">
-              <p>Gabriel Cance</p>
-            </a>
+            <p>Gabriel Cance</p>
           </Link>
         ) : (
           <p
@@ -67,6 +69,7 @@ const Header = () => {
       <div className="headerInformation">
         <Link
           to="/information"
+          alt={"Go to Information Page"}
           style={{ color: "white", textDecoration: "none" }}
         >
           <a alt="Information Page">
@@ -80,7 +83,7 @@ const Header = () => {
           {" "}
           <a
             href="https://www.instagram.com/gabrielcance/"
-            alt="instagram link"
+            alt="Go to Gabriel's Instagram"
             target="_blank"
             rel="noreferrer"
             className="instagram"
@@ -90,7 +93,7 @@ const Header = () => {
           <a
             href="mailto:cancegabriel@gmail.com"
             className="mail"
-            alt="Email Link"
+            alt="Go to Gabriel's Email"
           >
             {" "}
             Email
