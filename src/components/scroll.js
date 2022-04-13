@@ -6,7 +6,7 @@ import _debounce from "lodash/debounce"
 
 const Scroll = () => {
   const [disappear, setDisappear] = useState(true)
-  const [height, setHeight] = useState(window.innerHeight)
+  const [height, setHeight] = useState("99.5vh")
   const scroll = useRef(null)
 
   useEffect(() => {
@@ -25,8 +25,8 @@ const Scroll = () => {
   }, [])
   const changeHeight = () => {
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight
-    setHeight(vh)
+    let vh = Number(window.innerHeight) - 40
+    setHeight(`${vh}px`)
   }
 
   const checkWhere = () => {
@@ -55,7 +55,7 @@ const Scroll = () => {
       className="scrollDown"
       ref={scroll}
       style={{
-        paddingTop: `${Number(height) - 40}px`,
+        paddingTop: height,
       }}
     >
       <p>Scroll down</p>
