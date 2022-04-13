@@ -72,7 +72,7 @@
   color: white;
   display: flex;
   align-items: flex-end;
-  height: 99.5vh;
+  // height: 99.5vh;
   p {
     font-family: Helvetica, sans-serif;
 
@@ -107,8 +107,8 @@
     }
   }
   .scrollDown {
-    padding-top: 0;
-    height: 99.7vh;
+    // padding-top: 0;
+    margin-top: 15px;
     display: flex;
     align-items: flex-end;
     p {
@@ -145,9 +145,7 @@
     }
   }
   .scrollDown {
-    padding-top: 0;
-    // height: 99.5vh;
-    height: 90vh;
+    margin-top: 16px;
     display: flex;
     align-items: flex-end;
 
